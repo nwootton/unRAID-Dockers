@@ -31,6 +31,6 @@
   </Data>
   <WebUI>http://[iP]:[PORT:8099]/</WebUI>
   <Category>Productivity: HomeAutomation: Other: Status:Stable</Category>
-  <Icon></Icon>
+  <Icon>https://github.com/nwootton/unRAID-Magic-Mirror-Docker/blob/master/images/mirror.svg</Icon>
   <ExtraParams></ExtraParams>
 </Container>

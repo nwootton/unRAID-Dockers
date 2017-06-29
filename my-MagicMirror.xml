@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Container>
+  <Name>Magic Mirror</Name>
+  <Description>unRAID deployment of bastilimbach's version of MagicMirror for Docker</Description>
+  <Registry>https://hub.docker.com/r/bastilimbach/docker-magicmirror/</Registry>
+  <Repository>bastilimbach/docker-magicmirror</Repository>
+  <BindTime>true</BindTime>
+  <Privileged>false</Privileged>
+  <Environment/>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>8099</HostPort>
+        <ContainerPort>8080</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/cache/appdata/magic_mirror/config</HostDir>
+      <ContainerDir>/opt/magic_mirror/config</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+        <HostDir>/mnt/cache/appdata/magic_mirror/modules</HostDir>
+        <ContainerDir>/opt/magic_mirror/modules</ContainerDir>
+        <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <WebUI>http://[iP]:[PORT:8099]/</WebUI>
+  <Category>Productivity: HomeAutomation: Other: Status:Stable</Category>
+  <Icon></Icon>
+  <ExtraParams></ExtraParams>
+</Container>

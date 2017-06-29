@@ -12,3 +12,5 @@ The my-MagicMirror.xml file needs to be copied to
 ```
 
 on the unRAID server. It should then appear in the available Docker modules and allow you to configure it to point to the location of your config and modules.
+
+Icon made by RoundIcons from www.flaticon.com 

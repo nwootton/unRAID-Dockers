@@ -29,7 +29,7 @@
         <Mode>rw</Mode>
     </Volume>
   </Data>
-  <WebUI>http://[iP]:[PORT:8099]/</WebUI>
+  <WebUI>http://[IP]:[PORT:8099]/</WebUI>
   <Category>Productivity: HomeAutomation: Other: Status:Stable</Category>
   <Icon>https://github.com/nwootton/unRAID-Magic-Mirror-Docker/blob/master/images/mirror.svg</Icon>
   <ExtraParams></ExtraParams>

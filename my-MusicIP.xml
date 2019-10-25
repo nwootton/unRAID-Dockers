@@ -1,0 +1,59 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>MusicIP Headless</Name>
+  <Repository>ptoulouse/musicip</Repository>
+  <Registry>https://hub.docker.com/r/ptoulouse/musicip</Registry>
+  <Network>bridge</Network>
+  <Privileged>false</Privileged>
+  <Support/>
+  <Overview>MusicIP Mixer is a tool to generate playlists based on the tracks sound profiles rather than based on their tags.</Overview>
+  <Category/>
+  <WebUI>http://[IP]:[PORT:10002]/server</WebUI>
+  <TemplateURL/>
+  <Icon>https://pbs.twimg.com/profile_images/38245442/MIP_Red_Pos_400x400.png</Icon>
+  <ExtraParams/>
+  <DateInstalled>1571951185</DateInstalled>
+  <Description>MusicIP Mixer is a tool to generate playlists based on the tracks sound profiles rather than based on their tags. You provide a track, an artist or an album as input an it will build a playlist of songs that sounds like your input. This is a great way to rediscover forgotten music from your collection. This tool is a great complement to Logitech Media Server.</Description>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>10002</HostPort>
+        <ContainerPort>10002</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/user/music/</HostDir>
+      <ContainerDir>/music</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/mnt/user/music/musicip/</HostDir>
+      <ContainerDir>/config</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+    <Environment>
+    <Variable>
+      <Value>1000</Value>
+      <Name>PUID</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>1000</Value>
+      <Name>PGID</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>Europe/London</Value>
+      <Name>TZ</Name>
+      <Mode/>
+    </Variable>
+  </Environment>
+  <Config Name="Host Port 1" Target="10002" Default="10002" Mode="tcp" Description="Container Port: 10002" Type="Port" Display="always" Required="true" Mask="false">10002</Config>
+  <Config Name="Host Path 1" Target="/config" Default="/mnt/user/music/musipip/" Mode="rw" Description="Container Path: /config" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/music/musicip/</Config>
+  <Config Name="Host Path 2" Target="/music" Default="/mnt/user/music/" Mode="rw" Description="Container Path: /music" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/music/</Config>
+</Container>

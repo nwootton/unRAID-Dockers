@@ -1,7 +1,7 @@
 # unRAID-Dockers
 The XML files required to run apps under Dockerman in unRAID.
 
-please see each wiki page for individual notes
+Please see each wiki page for individual notes
 
 ## Installation
 The .xml file needs to be copied to
